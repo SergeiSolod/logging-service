@@ -16,6 +16,7 @@ export const fetchLogs = createAsyncThunk("fetchLogs", async (_, thunkAPI) => {
   } catch (e) {
     await thunkAPI.dispatch(setError(e.response.data.message));
     if (e.response.status === 403) {
+      thunkAPI.dispatch(setLoading(false));
       thunkAPI.dispatch(setPage("login"));
     }
   }
@@ -26,6 +27,7 @@ export const fetchLog = createAsyncThunk("fetchLog", async (data, thunkAPI) => {
     const response = await logsApi.log(data);
     thunkAPI.dispatch(fetchLogs());
   } catch (e) {
+    thunkAPI.dispatch(setLoading(false));
     await thunkAPI.dispatch(setError(e.response.data.message));
   }
 });

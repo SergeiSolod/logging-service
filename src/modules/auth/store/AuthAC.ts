@@ -16,6 +16,7 @@ export const fetchRegistration = createAsyncThunk(
       await thunkAPI.dispatch(setInfo(response.data.message));
       await thunkAPI.dispatch(fetchLogin(data));
     } catch (e: any) {
+      thunkAPI.dispatch(setLoading(false));
       await thunkAPI.dispatch(setError(e.response.data.message));
     }
   },
@@ -30,6 +31,7 @@ export const fetchLogin = createAsyncThunk(
       await localStorage.setItem("token", response.data.token);
       await thunkAPI.dispatch(fetchLogs());
     } catch (e: any) {
+      thunkAPI.dispatch(setLoading(false));
       await thunkAPI.dispatch(setError(e.response.data.message));
     }
   },

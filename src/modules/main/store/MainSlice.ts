@@ -21,11 +21,11 @@ export const MainSlice = createSlice({
     setPage: (state, action) => {
       state.page = action.payload;
     },
-    closeMessage: (state) => {
-      state.message = false;
-    },
     setLanguage: (state, action) => {
       state.language = action.payload;
+    },
+    closeMessage: (state) => {
+      state.message = false;
     },
     setError: (state, action) => {
       state.message = true;
