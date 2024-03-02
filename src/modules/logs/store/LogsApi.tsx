@@ -1,10 +1,8 @@
 import axios from "axios";
 
-export const API_URL = `http://localhost:5000/auth`;
-
 const $api = axios.create({
   withCredentials: true,
-  baseURL: API_URL,
+  baseURL: import.meta.env.VITE_API,
 });
 
 $api.interceptors.request.use((config) => {
