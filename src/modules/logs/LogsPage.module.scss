@@ -1,0 +1,31 @@
+.wrapper {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.elements {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 31px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.logs {
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+.element {
+  width: 200px;
+  margin-right: 20px;
+}
