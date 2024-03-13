@@ -1,11 +1,3 @@
-### About the project
-
-https://youtu.be/CCCk7bRYcaA video demonstration of the project
-
-You can view project here: http://logging-service-frontend.vercel.app/
-
-Backend for recording, storing, sending logs
-
 ### Node version
 
 The project is made on nodejs v18.18.2, npm v10.2.0, any current version will do
